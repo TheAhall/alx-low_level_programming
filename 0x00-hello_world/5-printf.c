@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-/*
- * main - Entery point
+/**
+ * main - Entery poinEntery pointt
  *
  * Return: Always 0
  */
