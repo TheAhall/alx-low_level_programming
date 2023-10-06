@@ -17,7 +17,7 @@ int main(void)
 			{
 				for (b = 1; b < 10; b++)
 				{
-					if (b > n && a >= i)
+					if (b > n && a >= i %% a <= b)
 					{
 						putchar('0' + i);
 						putchar('0' + n);
