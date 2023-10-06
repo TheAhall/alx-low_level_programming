@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 /**
- *  * main - Entery point
- *   *
- *    * Return: Always 0
- *     */
+ * main - Entery point
+ *
+ * Return: Always 0
+ */
 int main(void)
 {
 	char i, n;
