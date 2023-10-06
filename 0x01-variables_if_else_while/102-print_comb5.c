@@ -20,10 +20,12 @@ int main(void)
 			putchar('0' + (n % 10));
 			if(i == 98 && i == 99)
 			{
+				continue;
 				putchar(',');
 				putchar(' ');
 			}
 		}
+	}
 	putchar ('\n');
 	return (0);
 }
