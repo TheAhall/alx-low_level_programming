@@ -19,11 +19,9 @@ int main(void)
 			putchar('0' + (n / 10));
 			putchar('0' + (n % 10));
 			if (i == 98 && n == 99)
-			{
-				continue;
-				putchar(',');
-				putchar(' ');
-			}
+			continue;
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar ('\n');
