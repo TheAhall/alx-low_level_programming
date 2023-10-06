@@ -21,6 +21,7 @@ int main(void)
 					{
 						putchar('0' + i);
 						putchar('0' + n);
+						putchar(' ');
 						putchar('0' + a);
 						putchar('0' + b);
 						if (n != 8)
