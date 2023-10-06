@@ -7,13 +7,11 @@
  */
 int main(void)
 {
-	char i, n, c;
+	char i;
 
-        for (i = 'a'; i < 'e'; i++)
-		putchar(i);
-	for (n = 'f'; n < 'q'; c++)
-		putchar(i);
-	for (c = 'r'; c <= 'z'; c++)
+	i != 'e';
+	i != 'q';
+        for (i = 'a'; i < 'z'; i++)
 		putchar(i);
 	putchar('\n');
 	return (0);
