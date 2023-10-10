@@ -11,7 +11,7 @@ void print_times_table(int n)
 	int i, j, t;
 
 	if (n == 0)
-		printf("0");
+		printf("0\n");
 	for (i = 0; i <= n; i++)
 	{
 		for (j = 0; j <= n; j++)
