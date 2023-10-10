@@ -10,19 +10,24 @@ void print_times_table(int n)
 {
 	int i, j, t;
 
+	if (n == 0)
+		printf("0");
 	for (i = 0; i <= n; i++)
 	{
 		for (j = 0; j <= n; j++)
 		{
 			t = i * j;
-			if (j == 0)
-				printf("%d, ", t);
-			else
+			if (n > 0 && n < 15)
 			{
-				if (j != n)
-					printf("%3d, ", t);
+				if (j == 0)
+					printf("%d, ", t);
 				else
-					printf("%3d\n", t);
+				{
+					if (j != n)
+						printf("%3d, ", t);
+					else
+						printf("%3d\n", t);
+				}
 			}
 		}
 	}
