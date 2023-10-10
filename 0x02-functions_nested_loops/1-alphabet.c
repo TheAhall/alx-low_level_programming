@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * void - Entery point
+ * print_alphabet - Entery point
  *
  * Return: void
  */
