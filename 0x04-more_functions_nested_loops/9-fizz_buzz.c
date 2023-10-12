@@ -15,7 +15,7 @@ int main(void)
 		n = i % 5;
 
 		if (j != 0  && n != 0)
-			printf("%d ", i);
+			printf("%d", i);
 		else
 		{
 			if (j == n)
