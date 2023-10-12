@@ -19,15 +19,17 @@ int main(void)
 		else
 		{
 			if (j == n)
-				printf("FizzBuzz ");
+				printf("FizzBuzz");
 			else
 			{
 				if (j == 0)
-					printf("Fizz ");
+					printf("Fizz");
 				if (n == 0)
-					printf("Buzz ");
+					printf("Buzz");
 			}
 		}
+		if (i != 100)
+			printf(" ");
 	}
 	printf("\n");
 	return (0);
