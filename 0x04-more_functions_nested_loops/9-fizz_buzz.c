@@ -16,7 +16,7 @@ int main(void)
 		if (j != 0  && n != 0)
 			printf("%d ", i);
 		else
-		{	
+		{
 			if (j == 0 && j != n)
 				printf("Fizz ");
 			if (n == 0 && n != j)
