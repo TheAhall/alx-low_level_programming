@@ -17,12 +17,15 @@ int main(void)
 			printf("%d ", i);
 		else
 		{
-			if (j == 0 && j != n)
-				printf("Fizz ");
-			if (n == 0 && n != j)
-				printf("Buzz ");
-			if (j == 0 && n == j)
+			if (j == n)
 				printf("FizzBuzz ");
+			else
+			{
+				if (j == 0)
+					printf("Fizz ");
+				if (n == 0)
+					printf("Buzz ");
+			}
 		}
 	}
 	printf("\n");
