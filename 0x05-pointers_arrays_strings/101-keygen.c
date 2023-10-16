@@ -10,7 +10,7 @@
 int main(void)
 {
 	int i, sum, rand_num;
-	char password[16];
+	char password[84];
 
 	srand(time(NULL)); 
 	sum = 0;
