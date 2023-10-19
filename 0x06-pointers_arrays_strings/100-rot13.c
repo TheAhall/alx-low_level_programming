@@ -22,12 +22,10 @@ char *rot13(char *a)
 			if (a[i] == p[j])
 			{
 				a[i] = q[j];
-				break;
 			}
 			if (a[i] == k[j])
 			{
 				a[i] = l[j];
-				break;
 			}
 		}
 	}
