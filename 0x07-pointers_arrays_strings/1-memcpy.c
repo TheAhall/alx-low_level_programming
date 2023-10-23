@@ -6,7 +6,7 @@
  * @dest: var 1
  * @src: var 2
  * @n: the size
- * Return char
+ * Return: char
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
