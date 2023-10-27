@@ -3,7 +3,7 @@
 /**
  * main - entery point
  * @argc: number of arg
- * argv: vertor
+ * @argv: vertor
  * Return: Always 0
  */
 int main(int argc, char *argv[])
