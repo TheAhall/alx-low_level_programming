@@ -3,14 +3,14 @@
 
 /**
  * free_grid - function that frees a 2 dimensional grid
- * @grind: var 1
+ * @grid: var 1
  * @height: var 2
- * Return; void;
+ * Return: void
  */
 void free_grid(int **grid, int height)
 {
 	int i;
-	
+
 	for (i = 0; i < height; i++)
 		free(grid[i]);
 	free(grid);
