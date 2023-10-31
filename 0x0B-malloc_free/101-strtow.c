@@ -57,19 +57,20 @@ char **strtow(char *str)
 	words = wordscount(str);
 	if (words == 0)
 		return (NULL);
-	s = malloc(sizeof(char) * (words + 1));
+	s = malloc(sizeof(char *) * (words + 1));
 	if (s == NULL)
 		return (NULL);
 	for (i = 0; i < words; i++)
 	{
 		while (str[l] == ' ')
-		l++;
+			l++;
 		n = wordleng(str + l);
 		s[i] = malloc(sizeof(char) * (n + 1));
 		if (s[i] == NULL)
 		{
 			for (; i >= 0; i--)
-			free(s[i]);
+				free(s[i]);
+			free(s);
 			return (NULL);
 		}
 		for (j = 0; j < n; j++)
