@@ -4,7 +4,7 @@
 /**
  * main - entery point
  *
- * Returb: alwasy 0
+ * Return: alwasy 0
  */
 int main(void)
 {
