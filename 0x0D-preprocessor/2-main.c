@@ -6,8 +6,8 @@
  *
  * Returb: alwasy 0
  */
-int main(void) 
+int main(void)
 {
-    printf("%s\n", file_name);
-    return (0);
+	printf("%s\n", file_name);
+	return (0);
 }
