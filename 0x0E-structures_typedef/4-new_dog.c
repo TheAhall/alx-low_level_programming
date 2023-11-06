@@ -2,7 +2,7 @@
 
 /**
  * new_dog - function that creates a new dog.
- * #name: dog s name
+ * @name: dog s name
  * @age: dog s age
  * @owner: dog s owner
  * Return: struct dog
@@ -29,7 +29,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		(*d).name[i] = name[i];
 	(*d).name[i] = '\0';
 	(*d).age = age;
-	(*d).owner = malloc (sizeof(char) * (lo + 1));
+	(*d).owner = malloc(sizeof(char) * (lo + 1));
 	if ((*d).owner == NULL)
 	{
 		free(d);
