@@ -3,10 +3,9 @@
 #include <string.h>
 
 /**
-  * get_op_func - ...
-  * @s: ...
-  *
-  * Return: ...
+  * get_op_func - function pointer.
+  * @s: string
+  * Return: 0
   */
 int (*get_op_func(char *s))(int, int)
 {
