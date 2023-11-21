@@ -4,7 +4,7 @@ size_t looped_listint_len(const listint_t *head);
 
 /**
  * looped_listint_len - Counts the number of unique nodes
- * @head the list
+ * @head: the list
  * Return: 0 or value
  */
 size_t looped_listint_len(const listint_t *head)
