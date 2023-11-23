@@ -7,20 +7,21 @@
  */
 void print_binary(unsigned long int n)
 {
-	int size, lead = 1;
-	int bit, i;
+	int size;
+	int  i = 0;
 
-	size = sizeof(int) * 8;
-	for (i = size - 1; i >= 0; i--)
+	size = sizeof(n) * 8;
+	while (size)
 	{
-		bit = (n >> i) & 1;
-		if (bit || !lead)
+		if (n & 1L << --size)
 		{
-			_putchar('0' + bit);
-			lead = 0;
+			_putchar('1');
+			i++;
 		}
+		else if (i)
+			_putchar ('0');
 	}
-	if (lead)
+	if (!i)
 		_putchar('0');
 
 }
