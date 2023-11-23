@@ -14,13 +14,13 @@ void print_binary(unsigned long int n)
 	for (i = size - 1; i >= 0; i--)
 	{
 		bit = (n >> i) & 1;
-		if (bit == 1 || lead == 0)
+		if (bit || !lead)
 		{
 			_putchar('0' + bit);
 			lead = 0;
 		}
 	}
-	if (lead == 1)
+	if (lead)
 		_putchar('0');
 
 }
