@@ -20,6 +20,8 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 	if (l != 0)
 		b = write(n, text_content, l);
+	if (b == -1)
+		return (-1);
 	close(n);
 	return (b == l ? 1 : -1);
 }
