@@ -11,12 +11,12 @@ int create_file(const char *filename, char *text_content)
 	int  n;
 	ssize_t b = 0, l = 0;
 
-	if (filename == NULL)
+	if (filename == NULL || text_content == NULL)
 		return (-1);
 	n = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 	if (n == -1)
 		return (-1);
-	while (*text_content)
+	while (text_content[l] != '\0')
 		l++;
 	if (l != 0)
 		b = write(n, text_content, l);
