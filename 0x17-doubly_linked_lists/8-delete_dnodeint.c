@@ -8,50 +8,43 @@
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
+	dlistint_t *h1;
+	dlistint_t *h2;
 	unsigned int i;
-	dlistint_t *tmp1, *tmp2, *delnode;
 
-	if (*head ==NULL)
-		return (-1);
-	if (index == 0)
+	h1 = *head;
+
+	if (h1 != NULL)
+		while (h1->prev != NULL)
+			h1 = h1->prev;
+
+	i = 0;
+
+	while (h1 != NULL)
 	{
-		if ((*head)->next == NULL)
+		if (i == index)
 		{
-			free(*head);
-		}
-		else
-		{
-			tmp1 = *head;
-			*head = (*head)->next;
-			free(tmp1);
-		}
-	}
-	else
-	{
-		tmp1 = *head;
-		tmp2 = *head;
-		for (i = 0; i < index - 1; i++)
-		{
-			tmp1 = tmp1->next;
-			if (tmp1 == NULL)
-				return (-1);
-		}
-		for (i = 0; i < index; i++)
-		{
-			tmp2 = tmp2->next;
-			if (tmp2 == NULL)
+			if (i == 0)
 			{
-				delnode = tmp1;
-				tmp1 = tmp1->prev;
-				free(delnode);
-				return (1);
+				*head = h1->next;
+				if (*head != NULL)
+					(*head)->prev = NULL;
 			}
+			else
+			{
+				h2->next = h1->next;
+
+				if (h1->next != NULL)
+					h1->next->prev = h2;
+			}
+
+			free(h1);
+			return (1);
 		}
-		delnode = tmp2;
-		tmp2 = tmp2->next;
-		tmp1->next = tmp2;
-		tmp2->prev = tmp1;
-		free(delnode);
+		h2 = h1;
+		h1 = h1->next;
+		i++;
 	}
-	return (1);
+
+	return (-1);
 }
