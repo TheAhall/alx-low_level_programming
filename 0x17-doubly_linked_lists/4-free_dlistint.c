@@ -9,18 +9,13 @@ void free_dlistint(dlistint_t *head)
 {
 	dlistint_t *tmp;
 
-	if (head->next == NULL)
-		free(head);
-	else
+	while (head->next != NULL)
 	{
-		while (head->next != NULL)
-		{
-			tmp = head;
-			head = head->next;
-			tmp->next = NULL;
-			head->prev = NULL;
-			free(tmp);
-		}
-		free(head);
+		tmp = head;
+		head = head->next;
+		tmp->next = NULL;
+		head->prev = NULL;
+		free(tmp);
 	}
+	free(head);
 }
